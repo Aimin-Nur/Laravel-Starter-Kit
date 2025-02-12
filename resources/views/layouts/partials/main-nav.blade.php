@@ -1,12 +1,12 @@
 <div class="main-nav">
     <!-- Sidebar Logo -->
     <div class="logo-box">
-        <a href="{{ route['index']) }}" class="logo-dark">
+        <a href="{{ route('admin.dashboard.index') }}" class="logo-dark">
             <img src="/images/logo-sm.png" class="logo-sm" alt="logo sm">
             <img src="/images/logo-dark.png" class="logo-lg" alt="logo dark">
         </a>
 
-        <a href="{{ route('second', [ 'dashboards' , 'index']) }}" class="logo-light">
+        <a href="{{ route('admin.dashboard.index') }}" class="logo-light">
             <img src="/images/logo-sm.png" class="logo-sm" alt="logo sm">
             <img src="/images/logo-light.png" class="logo-lg" alt="logo light">
         </a>
@@ -23,7 +23,7 @@
             <li class="menu-title">General</li>
 
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('second', [ 'dashboards' , 'index']) }}">
+                <a class="nav-link" href="{{ route('admin.dashboard.index') }}">
                          <span class="nav-icon">
                               <iconify-icon icon="solar:widget-5-bold-duotone"></iconify-icon>
                          </span>
@@ -41,24 +41,25 @@
                 </a>
                 <div class="collapse" id="sidebarProducts">
                     <ul class="nav sub-navbar-nav">
-                    <li class="sub-nav-item">
-                            <a class="sub-nav-link" href="{{ route('third', ['general', 'products', 'list'])}}">List</a>
+                        <li class="sub-nav-item">
+                            <a class="sub-nav-link" href="{{ route('admin.product.index')}}">List</a>
                         </li>
                         <li class="sub-nav-item">
-                            <a class="sub-nav-link" href="{{ route('third', ['general', 'products', 'grid'])}}">Grid</a>
+                            <a class="sub-nav-link" href="{{ route('admin.product.grid')}}">Grid</a>
                         </li>
                         <li class="sub-nav-item">
-                            <a class="sub-nav-link" href="{{ route('third', ['general', 'products', 'detail'])}}">Details</a>
+                            <a class="sub-nav-link" href="{{ route('admin.product.edit', ['product' => 123]) }}">Details</a>
                         </li>
                         <li class="sub-nav-item">
-                            <a class="sub-nav-link" href="{{ route('third', ['general', 'products', 'edit'])}}">Edit</a>
+                            <a class="sub-nav-link" href="{{ route('admin.product.show', ['product' => 123 ])}}">Edit</a>
                         </li>
                         <li class="sub-nav-item">
-                            <a class="sub-nav-link" href="{{ route('third', ['general', 'products', 'create'])}}">Create</a>
+                            <a class="sub-nav-link" href="{{ route('admin.product.create') }}">Create</a>
                         </li>
                     </ul>
                 </div>
             </li>
+
 
             <li class="nav-item">
                 <a class="nav-link menu-arrow" href="#sidebarCategory" data-bs-toggle="collapse" role="button"
@@ -71,13 +72,13 @@
                 <div class="collapse" id="sidebarCategory">
                     <ul class="nav sub-navbar-nav">
                         <li class="sub-nav-item">
-                            <a class="sub-nav-link" href="{{ route('third', ['general', 'category', 'list'])}}">List</a>
+                            <a class="sub-nav-link" href="{{ route('admin.category.index')}}">List</a>
                         </li>
                         <li class="sub-nav-item">
-                            <a class="sub-nav-link" href="{{ route('third', ['general', 'category', 'edit'])}}">Edit</a>
+                            <a class="sub-nav-link" href="{{ route('admin.category.edit', ['category' => 123 ])}}">Edit</a>
                         </li>
                         <li class="sub-nav-item">
-                            <a class="sub-nav-link" href="{{ route('third', ['general', 'category', 'create'])}}">Create</a>
+                            <a class="sub-nav-link" href="{{ route('admin.category.create')}}">Create</a>
                         </li>
                     </ul>
                 </div>
@@ -95,10 +96,10 @@
                     <ul class="nav sub-navbar-nav">
 
                         <li class="sub-nav-item">
-                            <a class="sub-nav-link" href="{{ route('third', ['general', 'inventory', 'warehouse'])}}">Warehouse</a>
+                            <a class="sub-nav-link" href="{{ route('admin.inventory.index')}}">Warehouse</a>
                         </li>
                         <li class="sub-nav-item">
-                            <a class="sub-nav-link" href="{{ route('third', ['general', 'inventory', 'received-orders'])}}">Received Orders</a>
+                            <a class="sub-nav-link" href="{{ route('admin.inventory.received-orders')}}">Received Orders</a>
                         </li>
 
                     </ul>
@@ -117,16 +118,16 @@
                     <ul class="nav sub-navbar-nav">
 
                          <li class="sub-nav-item">
-                            <a class="sub-nav-link" href="{{ route('third', ['general', 'orders', 'list'])}}">List</a>
+                            <a class="sub-nav-link" href="{{ route('admin.order.index')}}">List</a>
                         </li>
                         <li class="sub-nav-item">
-                            <a class="sub-nav-link" href="{{ route('third', ['general', 'orders', 'details'])}}">Details</a>
+                            <a class="sub-nav-link" href="{{ route('admin.order.show', ['order' => 123 ])}}">Details</a>
                         </li>
                         <li class="sub-nav-item">
-                            <a class="sub-nav-link" href="{{ route('third', ['general', 'orders', 'cart'])}}">Cart</a>
+                            <a class="sub-nav-link" href="{{ route('admin.order.cart')}}">Cart</a>
                         </li>
                         <li class="sub-nav-item">
-                            <a class="sub-nav-link" href="{{ route('third', ['general', 'orders', 'checkout'])}}">Check Out</a>
+                            <a class="sub-nav-link" href="{{ route('admin.order.checkout')}}">Check Out</a>
                         </li>
                     </ul>
                 </div>
@@ -143,17 +144,18 @@
                 <div class="collapse" id="sidebarPurchases">
                     <ul class="nav sub-navbar-nav">
                         <li class="sub-nav-item">
-                            <a class="sub-nav-link" href="{{ route('third', ['general', 'purchase', 'list'])}}">List</a>
+                            <a class="sub-nav-link" href="{{ route('admin.purchase.index')}}">List</a>
                         </li>
                         <li class="sub-nav-item">
-                            <a class="sub-nav-link" href="{{ route('third', ['general', 'purchase', 'order'])}}">Order</a>
+                            <a class="sub-nav-link" href="{{ route('admin.purchase.order')}}">Order</a>
                         </li>
                         <li class="sub-nav-item">
-                            <a class="sub-nav-link" href="{{ route('third', ['general', 'purchase', 'return'])}}">Return</a>
+                            <a class="sub-nav-link" href="{{ route('admin.purchase.return')}}">Return</a>
                         </li>
                     </ul>
                 </div>
             </li>
+
 
             <li class="nav-item">
                 <a class="nav-link menu-arrow" href="#sidebarAttributes" data-bs-toggle="collapse" role="button"
@@ -166,17 +168,18 @@
                 <div class="collapse" id="sidebarAttributes">
                     <ul class="nav sub-navbar-nav">
                         <li class="sub-nav-item">
-                            <a class="sub-nav-link" href="{{ route('third', ['general', 'attributes', 'list'])}}">List</a>
+                            <a class="sub-nav-link" href="{{ route('admin.attribute.index')}}">List</a>
                         </li>
                         <li class="sub-nav-item">
-                            <a class="sub-nav-link" href="{{ route('third', ['general', 'attributes', 'edit'])}}">Edit</a>
+                            <a class="sub-nav-link" href="{{ route('admin.attribute.edit', ['attribute' => 123 ])}}">Edit</a>
                         </li>
                         <li class="sub-nav-item">
-                            <a class="sub-nav-link" href="{{ route('third', ['general', 'attributes', 'create'])}}">Create</a>
+                            <a class="sub-nav-link" href="{{ route('admin.attribute.create')}}">Create</a>
                         </li>
                     </ul>
                 </div>
             </li>
+
 
             <li class="nav-item">
                 <a class="nav-link menu-arrow" href="#sidebarInvoice" data-bs-toggle="collapse" role="button"
@@ -189,20 +192,20 @@
                 <div class="collapse" id="sidebarInvoice">
                     <ul class="nav sub-navbar-nav">
                         <li class="sub-nav-item">
-                            <a class="sub-nav-link" href="{{ route('third', ['general', 'invoice', 'list'])}}">List</a>
+                            <a class="sub-nav-link" href="{{ route('admin.invoice.index')}}">List</a>
                         </li>
                         <li class="sub-nav-item">
-                            <a class="sub-nav-link" href="{{ route('third', ['general', 'invoice', 'details'])}}">Details</a>
+                            <a class="sub-nav-link" href="{{ route('admin.invoice.show', ['invoice' => 123])}}">Details</a>
                         </li>
                         <li class="sub-nav-item">
-                            <a class="sub-nav-link" href="{{route('third', ['general', 'invoice', 'create'])}}">Create</a>
+                            <a class="sub-nav-link" href="{{ route('admin.invoice.create')}}">Create</a>
                         </li>
                     </ul>
                 </div>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('second', ['general', 'settings'])}}">
+                <a class="nav-link" href="{{ route('admin.setting.index')}}">
                          <span class="nav-icon">
                               <iconify-icon icon="solar:settings-bold-duotone"></iconify-icon>
                          </span>
@@ -213,7 +216,7 @@
             <li class="menu-title mt-2">Users</li>
 
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('second', ['users', 'pages-profile'])}}">
+                <a class="nav-link" href="{{ route('admin.profile.index') }}">
                          <span class="nav-icon">
                               <iconify-icon icon="solar:chat-square-like-bold-duotone"></iconify-icon>
                          </span>
@@ -236,24 +239,26 @@
                                 <a class="sub-nav-link" href="{{ route('admin.roles.index')  }}">List</a>
                             </li>
                             <li class="sub-nav-item">
-                                <a class="sub-nav-link" href="{{ route('third', ['users', 'role', 'edit'])}}">Edit</a>
+                                <a class="sub-nav-link" href="{{ route('admin.roles.edit', ['id' => 1])}}">Edit</a>
                             </li>
                             <li class="sub-nav-item">
-                                <a class="sub-nav-link" href="{{ route('third', ['users', 'role', 'create'])}}">Create</a>
+                                <a class="sub-nav-link" href="{{ route('admin.roles.create')}}">Create</a>
                             </li>
                         </ul>
                     </ul>
                 </div>
             </li>
 
+
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('second', ['users', 'pages-permission'])}}">
+                <a class="nav-link" href="{{ route('admin.permissions.index')}}">
                          <span class="nav-icon">
                               <iconify-icon icon="solar:checklist-minimalistic-bold-duotone"></iconify-icon>
                          </span>
                     <span class="nav-text"> Permissions </span>
                 </a>
             </li>
+
 
             <li class="nav-item">
                 <a class="nav-link menu-arrow" href="#sidebarCustomers" data-bs-toggle="collapse" role="button"
@@ -267,14 +272,15 @@
                     <ul class="nav sub-navbar-nav">
 
                         <li class="sub-nav-item">
-                            <a class="sub-nav-link" href="{{ route('third', ['users', 'customer', 'list'])}}">List</a>
+                            <a class="sub-nav-link" href="{{ route('admin.customer.index')}}">List</a>
                         </li>
                         <li class="sub-nav-item">
-                            <a class="sub-nav-link" href="{{ route('third', ['users', 'customer',  'details'])}}">Details</a>
+                            <a class="sub-nav-link" href="{{ route('admin.customer.show', ['customer' => 123 ])}}">Details</a>
                         </li>
                     </ul>
                 </div>
             </li>
+
 
             <li class="nav-item">
                 <a class="nav-link menu-arrow" href="#sidebarSellers" data-bs-toggle="collapse" role="button"
@@ -287,22 +293,24 @@
                 <div class="collapse" id="sidebarSellers">
                     <ul class="nav sub-navbar-nav">
                         <li class="sub-nav-item">
-                            <a class="sub-nav-link" href="{{ route('third', ['users', 'seller', 'list'])}}">List</a>
+                            <a class="sub-nav-link" href="{{ route('admin.seller.index')}}">List</a>
                         </li>
                         <li class="sub-nav-item">
-                            <a class="sub-nav-link" href="{{ route('third', ['users', 'seller', 'details'])}}">Details</a>
+                            <a class="sub-nav-link" href="{{ route('admin.seller.show', ['seller' => 123 ])}}">Details</a>
                         </li>
                         <li class="sub-nav-item">
-                            <a class="sub-nav-link" href="{{ route('third', ['users', 'seller', 'edit'])}}">Edit</a>
+                            <a class="sub-nav-link" href="{{ route('admin.seller.edit', ['seller' => 123 ])}}">Edit</a>
                         </li>
                         <li class="sub-nav-item">
-                            <a class="sub-nav-link" href="{{ route('third', ['users', 'seller', 'create'])}}">Create</a>
+                            <a class="sub-nav-link" href="{{ route('admin.seller.create')}}">Create</a>
                         </li>
                     </ul>
                 </div>
             </li>
 
+
             <li class="menu-title mt-2">Other</li>
+
 
             <li class="nav-item">
                 <a class="nav-link menu-arrow" href="#sidebarCoupons" data-bs-toggle="collapse" role="button"
@@ -315,28 +323,29 @@
                 <div class="collapse" id="sidebarCoupons">
                     <ul class="nav sub-navbar-nav">
                         <li class="sub-nav-item">
-                            <a class="sub-nav-link" href="{{ route('second', ['other', 'coupons-list'])}}">List</a>
+                            <a class="sub-nav-link" href="{{ route('admin.coupons.index')}}">List</a>
                         </li>
                         <li class="sub-nav-item">
-                            <a class="sub-nav-link" href="{{ route('second', ['other', 'coupons-add'])}}">Add</a>
+                            <a class="sub-nav-link" href="{{ route('admin.coupons.create')}}">Add</a>
                         </li>
                     </ul>
                 </div>
             </li>
 
-            <li class="nav-item">
+
+            {{-- <li class="nav-item">
                 <a class="nav-link" href="{{ route('second', ['other', 'pages-review'])}}">
                          <span class="nav-icon">
                               <iconify-icon icon="solar:chat-square-like-bold-duotone"></iconify-icon>
                          </span>
                     <span class="nav-text"> Reviews </span>
                 </a>
-            </li>
+            </li> --}}
 
             <li class="menu-title mt-2">Other Apps</li>
 
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('second', ['apps', 'chat'])}}">
+                <a class="nav-link" href="{{ route('admin.chat.index')}}">
                          <span class="nav-icon">
                               <iconify-icon icon="solar:chat-round-bold-duotone"></iconify-icon>
                          </span>
@@ -344,8 +353,9 @@
                 </a>
             </li>
 
+
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('second', ['apps', 'email'])}}">
+                <a class="nav-link" href="{{ route('admin.email.index')}}">
                          <span class="nav-icon">
                               <iconify-icon icon="solar:mailbox-bold-duotone"></iconify-icon>
                          </span>
@@ -353,8 +363,9 @@
                 </a>
             </li>
 
+
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('second', ['apps', 'calendar'])}}">
+                <a class="nav-link" href="{{ route('admin.calendar.index')}}">
                          <span class="nav-icon">
                               <iconify-icon icon="solar:calendar-bold-duotone"></iconify-icon>
                          </span>
@@ -362,8 +373,9 @@
                 </a>
             </li>
 
+
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('second', ['apps', 'todo'])}}">
+                <a class="nav-link" href="{{ route('admin.todo.index')}}">
                          <span class="nav-icon">
                               <iconify-icon icon="solar:checklist-bold-duotone"></iconify-icon>
                          </span>
@@ -371,19 +383,20 @@
                 </a>
             </li>
 
+
             <li class="menu-title mt-2">Support</li>
 
-            <li class="nav-item">
+            {{-- <li class="nav-item">
                 <a class="nav-link" href="{{ route('second', ['support', 'help-center'])}}">
                          <span class="nav-icon">
                               <iconify-icon icon="solar:help-bold-duotone"></iconify-icon>
                          </span>
                     <span class="nav-text"> Help Center </span>
                 </a>
-            </li>
+            </li> --}}
 
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('second', ['support', 'faqs'])}}">
+                <a class="nav-link" href="{{ route('admin.faqs.index')}}">
                          <span class="nav-icon">
                               <iconify-icon icon="solar:question-circle-bold-duotone"></iconify-icon>
                          </span>
@@ -391,14 +404,7 @@
                 </a>
             </li>
 
-            <li class="nav-item">
-                <a class="nav-link" href="{{ route('second', ['support', 'privacy-policy'])}}">
-                         <span class="nav-icon">
-                              <iconify-icon icon="solar:document-text-bold-duotone"></iconify-icon>
-                         </span>
-                    <span class="nav-text"> Privacy Policy </span>
-                </a>
-            </li>
+
 
             <li class="menu-title mt-2">Custom</li>
 
@@ -413,29 +419,27 @@
                 <div class="collapse" id="sidebarPages">
                     <ul class="nav sub-navbar-nav">
                         <li class="sub-nav-item">
-                            <a class="sub-nav-link" href="{{ route('third', ['custom', 'pages', 'starter'])}}">Welcome</a>
+                            <a class="sub-nav-link" href="{{ route('admin.pages.welcome')}}">Welcome</a>
                         </li>
                         <li class="sub-nav-item">
-                            <a class="sub-nav-link" href="{{ route('third', ['custom', 'pages', 'coming-soon'])}}">Coming Soon</a>
+                            <a class="sub-nav-link" href="{{ route('admin.pages.comingSoon')}}">Coming Soon</a>
                         </li>
                         <li class="sub-nav-item">
-                            <a class="sub-nav-link" href="{{ route('third', ['custom', 'pages', 'timeline'])}}">Timeline</a>
+                            <a class="sub-nav-link" href="{{ route('admin.pages.timeline')}}">Timeline</a>
                         </li>
                         <li class="sub-nav-item">
-                            <a class="sub-nav-link" href="{{ route('third', ['custom', 'pages', 'pricing'])}}">Pricing</a>
+                            <a class="sub-nav-link" href="{{ route('admin.pages.pricing')}}">Pricing</a>
                         </li>
                         <li class="sub-nav-item">
-                            <a class="sub-nav-link" href="{{ route('third', ['custom', 'pages', 'maintenance'])}}">Maintenance</a>
+                            <a class="sub-nav-link" href="{{ route('admin.pages.maintenance')}}">Maintenance</a>
                         </li>
                         <li class="sub-nav-item">
-                            <a class="sub-nav-link" href="{{ route('third', ['custom', 'pages', 'error-404'])}}">404 Error</a>
-                        </li>
-                        <li class="sub-nav-item">
-                            <a class="sub-nav-link" href="{{ route('third', ['custom', 'pages', 'error-404-alt'])}}">404 Error (alt)</a>
+                            <a class="sub-nav-link" href="{{ route('admin.pages.404')}}">404 Error</a>
                         </li>
                     </ul>
                 </div>
             </li>
+
 
             <li class="nav-item">
                 <a class="nav-link menu-arrow" href="#sidebarAuthentication" data-bs-toggle="collapse" role="button"
@@ -448,17 +452,17 @@
                 <div class="collapse" id="sidebarAuthentication">
                     <ul class="nav sub-navbar-nav">
                         <li class="sub-nav-item">
-                            <a class="sub-nav-link" href="{{ route('second', [ 'auth' , 'login']) }}">Sign In</a>
+                            <a class="sub-nav-link" href="{{ route('admin.pages.signin')}}">Sign In</a>
                         </li>
                         <li class="sub-nav-item">
-                            <a class="sub-nav-link" href="{{ route('second', [ 'auth' , 'register']) }}">Sign Up</a>
+                            <a class="sub-nav-link" href="{{ route('admin.pages.signup') }}">Sign Up</a>
                         </li>
                         <li class="sub-nav-item">
-                            <a class="sub-nav-link" href="{{ route('second', [ 'auth' , 'reset-password']) }}">Reset
+                            <a class="sub-nav-link" href="{{ route('admin.pages.reset-password') }}">Reset
                                 Password</a>
                         </li>
                         <li class="sub-nav-item">
-                            <a class="sub-nav-link" href="{{ route('second', [ 'auth' , 'lock-screen']) }}">Lock
+                            <a class="sub-nav-link" href="{{ route('admin.pages.lock-screen') }}">Lock
                                 Screen</a>
                         </li>
                     </ul>
@@ -466,7 +470,7 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('second', ['custom', 'widgets'])}}">
+                <a class="nav-link" href="{{ route('admin.pages.widget')}}">
                          <span class="nav-icon">
                               <iconify-icon icon="solar:atom-bold-duotone"></iconify-icon>
                          </span>
@@ -475,6 +479,7 @@
                 </a>
             </li>
 
+            {{--
             <li class="menu-title mt-2">Components</li>
 
             <li class="nav-item">
@@ -802,7 +807,7 @@
                          </span>
                     <span class="nav-text"> Disable Item </span>
                 </a>
-            </li>
+            </li> --}}
         </ul>
     </div>
 </div>

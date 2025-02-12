@@ -5,14 +5,14 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class ProfileController extends Controller
+class ProductController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-       return view('users.pages-profile');
+        return view('general.products.list');
     }
 
     /**
@@ -20,7 +20,7 @@ class ProfileController extends Controller
      */
     public function create()
     {
-        //
+        return view('general.products.create');
     }
 
     /**
@@ -36,15 +36,15 @@ class ProfileController extends Controller
      */
     public function show(string $id)
     {
-        //
+        return view('general.products.edit', ['id' => $id]);
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit($id)
     {
-        //
+        return view('general.products.detail', ['id' => $id]);
     }
 
     /**
@@ -61,5 +61,10 @@ class ProfileController extends Controller
     public function destroy(string $id)
     {
         //
+    }
+
+    public function grid()
+    {
+        return view('general.products.grid');
     }
 }

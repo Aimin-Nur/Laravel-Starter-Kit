@@ -5,14 +5,14 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class ProfileController extends Controller
+class SellerController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-       return view('users.pages-profile');
+        return view('users.seller.list');
     }
 
     /**
@@ -20,7 +20,7 @@ class ProfileController extends Controller
      */
     public function create()
     {
-        //
+        return view('users.seller.create');
     }
 
     /**
@@ -36,7 +36,7 @@ class ProfileController extends Controller
      */
     public function show(string $id)
     {
-        //
+        return view('users.seller.details', ['id' => $id]);
     }
 
     /**
@@ -44,7 +44,7 @@ class ProfileController extends Controller
      */
     public function edit(string $id)
     {
-        //
+       return view('users.seller.edit', ['id' => $id]);
     }
 
     /**

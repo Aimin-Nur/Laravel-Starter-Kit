@@ -5,14 +5,14 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class ProfileController extends Controller
+class PurchaseController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-       return view('users.pages-profile');
+        return view('general.purchase.list');
     }
 
     /**
@@ -61,5 +61,15 @@ class ProfileController extends Controller
     public function destroy(string $id)
     {
         //
+    }
+
+    public function order()
+    {
+        return view('general.purchase.order');
+    }
+
+    public function return()
+    {
+        return view('general.purchase.return');
     }
 }

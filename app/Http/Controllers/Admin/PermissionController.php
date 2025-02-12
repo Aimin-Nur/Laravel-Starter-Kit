@@ -10,13 +10,6 @@ use Spatie\Permission\Models\Permission;
 
 class PermissionController extends Controller
 {
-    function __construct()
-    {
-        $this->middleware('role_or_permission:SuperAdmin|Permission access|Permission create|Permission edit|Permission delete', ['only' => ['index','show']]);
-        $this->middleware('role_or_permission:SuperAdmin|Permission create', ['only' => ['create','store']]);
-        $this->middleware('role_or_permission:SuperAdmin|Permission edit', ['only' => ['edit','update']]);
-        $this->middleware('role_or_permission:SuperAdmin|Permission delete', ['only' => ['destroy']]);
-    }
 
     /**
      * Display a listing of the resource.
@@ -26,7 +19,7 @@ class PermissionController extends Controller
     public function index()
     {
         $permissions = Permission::whereNotIn('name', ['AdminPanel access'])->get();
-        return view('admin.permissions.index', compact('permissions'));
+        return view('users.pages-permission', compact('permissions'));
     }
 
     /**

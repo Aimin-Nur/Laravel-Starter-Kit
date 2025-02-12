@@ -202,7 +202,7 @@
                         <div class="text-md-end mt-3 mt-md-0">
                             <button type="button" class="btn btn-outline-secondary me-1"><i class="bx bx-cog me-1"></i>More Setting</button>
                             <button type="button" class="btn btn-outline-secondary me-1"><i class="bx bx-filter-alt me-1"></i> Filters</button>
-                            <a href="{{ route('third', ['general', 'products', 'create'])}}" class="btn btn-success me-1"><i class="bx bx-plus"></i> New Product</a>
+                            {{-- <a href="{{ route('third', ['general', 'products', 'create'])}}" class="btn btn-success me-1"><i class="bx bx-plus"></i> New Product</a> --}}
                         </div>
                     </div>
                 </div>
@@ -213,7 +213,7 @@
                 <div class="card">
                     <img src="/images/product/p-1.png" alt="" class="img-fluid ">
                     <div class="card-body bg-light-subtle rounded-bottom">
-                        <a href="{{ route('third', ['general', 'products', 'detail'])}}" class="text-dark fw-medium fs-16">Men Black Slim Fit T-shirt</a>
+                        {{-- <a href="{{ route('third', ['general', 'products', 'detail'])}}" class="text-dark fw-medium fs-16">Men Black Slim Fit T-shirt</a> --}}
                         <div class="my-1">
                             <div class="d-flex gap-2 align-items-center">
                                 <ul class="d-flex text-warning m-0 fs-18  list-unstyled">
@@ -252,7 +252,7 @@
                                         <a href="#!" class="dropdown-item">Delete</a>
                                     </div>
                                 </div>
-                                <a href="{{ route('third', ['general', 'orders', 'cart'])}}" class="btn btn-outline-dark border border-secondary-subtle d-flex align-items-center justify-content-center gap-1 w-100"><i class='bx bx-cart align-middle'></i> Add To Cart</a>
+                                {{-- <a href="{{ route('third', ['general', 'orders', 'cart'])}}" class="btn btn-outline-dark border border-secondary-subtle d-flex align-items-center justify-content-center gap-1 w-100"><i class='bx bx-cart align-middle'></i> Add To Cart</a> --}}
                             </div>
                         </div>
                     </div>
@@ -265,7 +265,7 @@
                 <div class="card">
                     <img src="/images/product/p-2.png" alt="" class="img-fluid ">
                     <div class="card-body bg-light-subtle rounded-bottom">
-                        <a href="{{ route('third', ['general', 'products', 'detail'])}}" class="text-dark fw-medium fs-16">Olive Green Leather Bag</a>
+                        {{-- <a href="{{ route('third', ['general', 'products', 'detail'])}}" class="text-dark fw-medium fs-16">Olive Green Leather Bag</a> --}}
                         <div class="my-1">
                             <div class="d-flex gap-2 align-items-center">
                                 <ul class="d-flex text-warning m-0 fs-18  list-unstyled">
@@ -304,7 +304,7 @@
                                         <a href="#!" class="dropdown-item">Delete</a>
                                     </div>
                                 </div>
-                                <a href="{{ route('third', ['general', 'orders', 'cart'])}}" class="btn btn-outline-dark border border-secondary-subtle d-flex align-items-center justify-content-center gap-1 w-100"><i class='bx bx-cart align-middle'></i> Add To Cart</a>
+                                {{-- <a href="{{ route('third', ['general', 'orders', 'cart'])}}" class="btn btn-outline-dark border border-secondary-subtle d-flex align-items-center justify-content-center gap-1 w-100"><i class='bx bx-cart align-middle'></i> Add To Cart</a> --}}
                             </div>
                         </div>
                     </div>
@@ -318,7 +318,7 @@
                 <div class="card">
                     <img src="/images/product/p-3.png" alt="" class="img-fluid ">
                     <div class="card-body bg-light-subtle rounded-bottom">
-                        <a href="{{ route('third', ['general', 'products', 'detail'])}}" class="text-dark fw-medium fs-16">Women Golden Dress</a>
+                        {{-- <a href="{{ route('third', ['general', 'products', 'detail'])}}" class="text-dark fw-medium fs-16">Women Golden Dress</a> --}}
                         <div class="my-1">
                             <div class="d-flex gap-2 align-items-center">
                                 <ul class="d-flex text-warning m-0 fs-18  list-unstyled">
@@ -357,7 +357,7 @@
                                         <a href="#!" class="dropdown-item">Delete</a>
                                     </div>
                                 </div>
-                                <a href="{{ route('third', ['general', 'orders', 'cart'])}}" class="btn btn-outline-dark border border-secondary-subtle d-flex align-items-center justify-content-center gap-1 w-100"><i class='bx bx-cart align-middle'></i> Add To Cart</a>
+                                {{-- <a href="{{ route('third', ['general', 'orders', 'cart'])}}" class="btn btn-outline-dark border border-secondary-subtle d-flex align-items-center justify-content-center gap-1 w-100"><i class='bx bx-cart align-middle'></i> Add To Cart</a> --}}
                             </div>
                         </div>
                     </div>
@@ -370,7 +370,7 @@
                 <div class="card">
                     <img src="/images/product/p-4.png" alt="" class="img-fluid ">
                     <div class="card-body bg-light-subtle rounded-bottom">
-                        <a href="{{ route('third', ['general', 'products', 'detail'])}}" class="text-dark fw-medium fs-16">Gray Cap For Men</a>
+                        {{-- <a href="{{ route('third', ['general', 'products', 'detail'])}}" class="text-dark fw-medium fs-16">Gray Cap For Men</a> --}}
                         <div class="my-1">
                             <div class="d-flex gap-2 align-items-center">
                                 <ul class="d-flex text-warning m-0 fs-18  list-unstyled">
@@ -409,7 +409,7 @@
                                         <a href="#!" class="dropdown-item">Delete</a>
                                     </div>
                                 </div>
-                                <a href="{{ route('third', ['general', 'orders', 'cart'])}}" class="btn btn-outline-dark border border-secondary-subtle d-flex align-items-center justify-content-center gap-1 w-100"><i class='bx bx-cart align-middle'></i> Add To Cart</a>
+                                {{-- <a href="{{ route('third', ['general', 'orders', 'cart'])}}" class="btn btn-outline-dark border border-secondary-subtle d-flex align-items-center justify-content-center gap-1 w-100"><i class='bx bx-cart align-middle'></i> Add To Cart</a> --}}
                             </div>
                         </div>
                     </div>
@@ -422,7 +422,7 @@
                 <div class="card">
                     <img src="/images/product/p-5.png" alt="" class="img-fluid ">
                     <div class="card-body bg-light-subtle rounded-bottom">
-                        <a href="{{ route('third', ['general', 'products', 'detail'])}}" class="text-dark fw-medium fs-16">Dark Green Cargo Pent</a>
+                        {{-- <a href="{{ route('third', ['general', 'products', 'detail'])}}" class="text-dark fw-medium fs-16">Dark Green Cargo Pent</a> --}}
                         <div class="my-1">
                             <div class="d-flex gap-2 align-items-center">
                                 <ul class="d-flex text-warning m-0 fs-18  list-unstyled">
@@ -461,7 +461,7 @@
                                         <a href="#!" class="dropdown-item">Delete</a>
                                     </div>
                                 </div>
-                                <a href="{{ route('third', ['general', 'orders', 'cart'])}}" class="btn btn-outline-dark border border-secondary-subtle d-flex align-items-center justify-content-center gap-1 w-100"><i class='bx bx-cart align-middle'></i> Add To Cart</a>
+                                {{-- <a href="{{ route('third', ['general', 'orders', 'cart'])}}" class="btn btn-outline-dark border border-secondary-subtle d-flex align-items-center justify-content-center gap-1 w-100"><i class='bx bx-cart align-middle'></i> Add To Cart</a> --}}
                             </div>
                         </div>
                     </div>
@@ -474,7 +474,7 @@
                 <div class="card">
                     <img src="/images/product/p-6.png" alt="" class="img-fluid ">
                     <div class="card-body bg-light-subtle rounded-bottom">
-                        <a href="{{ route('third', ['general', 'products', 'detail'])}}" class="text-dark fw-medium fs-16">Orange Headphone</a>
+                        {{-- <a href="{{ route('third', ['general', 'products', 'detail'])}}" class="text-dark fw-medium fs-16">Orange Headphone</a> --}}
                         <div class="my-1">
                             <div class="d-flex gap-2 align-items-center">
                                 <ul class="d-flex text-warning m-0 fs-18  list-unstyled">
@@ -513,7 +513,7 @@
                                         <a href="#!" class="dropdown-item">Delete</a>
                                     </div>
                                 </div>
-                                <a href="{{ route('third', ['general', 'orders', 'cart'])}}" class="btn btn-outline-dark border border-secondary-subtle d-flex align-items-center justify-content-center gap-1 w-100"><i class='bx bx-cart align-middle'></i> Add To Cart</a>
+                                {{-- <a href="{{ route('third', ['general', 'orders', 'cart'])}}" class="btn btn-outline-dark border border-secondary-subtle d-flex align-items-center justify-content-center gap-1 w-100"><i class='bx bx-cart align-middle'></i> Add To Cart</a> --}}
                             </div>
                         </div>
                     </div>
@@ -526,7 +526,7 @@
                 <div class="card">
                     <img src="/images/product/p-7.png" alt="" class="img-fluid ">
                     <div class="card-body bg-light-subtle rounded-bottom">
-                        <a href="{{ route('third', ['general', 'products', 'detail'])}}" class="text-dark fw-medium fs-16">Kid's Yellow Shoes</a>
+                        {{-- <a href="{{ route('third', ['general', 'products', 'detail'])}}" class="text-dark fw-medium fs-16">Kid's Yellow Shoes</a> --}}
                         <div class="my-1">
                             <div class="d-flex gap-2 align-items-center">
                                 <ul class="d-flex text-warning m-0 fs-18  list-unstyled">
@@ -565,7 +565,7 @@
                                         <a href="#!" class="dropdown-item">Delete</a>
                                     </div>
                                 </div>
-                                <a href="{{ route('third', ['general', 'orders', 'cart'])}}" class="btn btn-outline-dark border border-secondary-subtle d-flex align-items-center justify-content-center gap-1 w-100"><i class='bx bx-cart align-middle'></i> Add To Cart</a>
+                                {{-- <a href="{{ route('third', ['general', 'orders', 'cart'])}}" class="btn btn-outline-dark border border-secondary-subtle d-flex align-items-center justify-content-center gap-1 w-100"><i class='bx bx-cart align-middle'></i> Add To Cart</a> --}}
                             </div>
                         </div>
                     </div>
@@ -578,7 +578,7 @@
                 <div class="card">
                     <img src="/images/product/p-8.png" alt="" class="img-fluid ">
                     <div class="card-body bg-light-subtle rounded-bottom">
-                        <a href="{{ route('third', ['general', 'products', 'detail'])}}" class="text-dark fw-medium fs-16">Men Dark Brown Wallet</a>
+                        {{-- <a href="{{ route('third', ['general', 'products', 'detail'])}}" class="text-dark fw-medium fs-16">Men Dark Brown Wallet</a> --}}
                         <div class="my-1">
                             <div class="d-flex gap-2 align-items-center">
                                 <ul class="d-flex text-warning m-0 fs-18  list-unstyled">
@@ -617,7 +617,7 @@
                                         <a href="#!" class="dropdown-item">Delete</a>
                                     </div>
                                 </div>
-                                <a href="{{ route('third', ['general', 'orders', 'cart'])}}" class="btn btn-outline-dark border border-secondary-subtle d-flex align-items-center justify-content-center gap-1 w-100"><i class='bx bx-cart align-middle'></i> Add To Cart</a>
+                                {{-- <a href="{{ route('third', ['general', 'orders', 'cart'])}}" class="btn btn-outline-dark border border-secondary-subtle d-flex align-items-center justify-content-center gap-1 w-100"><i class='bx bx-cart align-middle'></i> Add To Cart</a> --}}
                             </div>
                         </div>
                     </div>
@@ -630,7 +630,7 @@
                 <div class="card">
                     <img src="/images/product/p-9.png" alt="" class="img-fluid ">
                     <div class="card-body bg-light-subtle rounded-bottom">
-                        <a href="{{ route('third', ['general', 'products', 'detail'])}}" class="text-dark fw-medium fs-16">Sky Blue Mat Sunglass</a>
+                        {{-- <a href="{{ route('third', ['general', 'products', 'detail'])}}" class="text-dark fw-medium fs-16">Sky Blue Mat Sunglass</a> --}}
                         <div class="my-1">
                             <div class="d-flex gap-2 align-items-center">
                                 <ul class="d-flex text-warning m-0 fs-18  list-unstyled">
@@ -669,7 +669,7 @@
                                         <a href="#!" class="dropdown-item">Delete</a>
                                     </div>
                                 </div>
-                                <a href="{{ route('third', ['general', 'orders', 'cart'])}}" class="btn btn-outline-dark border border-secondary-subtle d-flex align-items-center justify-content-center gap-1 w-100"><i class='bx bx-cart align-middle'></i> Add To Cart</a>
+                                {{-- <a href="{{ route('third', ['general', 'orders', 'cart'])}}" class="btn btn-outline-dark border border-secondary-subtle d-flex align-items-center justify-content-center gap-1 w-100"><i class='bx bx-cart align-middle'></i> Add To Cart</a> --}}
                             </div>
                         </div>
                     </div>
@@ -682,7 +682,7 @@
                 <div class="card">
                     <img src="/images/product/p-10.png" alt="" class="img-fluid ">
                     <div class="card-body bg-light-subtle rounded-bottom">
-                        <a href="{{ route('third', ['general', 'products', 'detail'])}}" class="text-dark fw-medium fs-16">Kid's Yellow T-shirt</a>
+                        {{-- <a href="{{ route('third', ['general', 'products', 'detail'])}}" class="text-dark fw-medium fs-16">Kid's Yellow T-shirt</a> --}}
                         <div class="my-1">
                             <div class="d-flex gap-2 align-items-center">
                                 <ul class="d-flex text-warning m-0 fs-18  list-unstyled">
@@ -721,7 +721,7 @@
                                         <a href="#!" class="dropdown-item">Delete</a>
                                     </div>
                                 </div>
-                                <a href="{{ route('third', ['general', 'orders', 'cart'])}}" class="btn btn-outline-dark border border-secondary-subtle d-flex align-items-center justify-content-center gap-1 w-100"><i class='bx bx-cart align-middle'></i> Add To Cart</a>
+                                {{-- <a href="{{ route('third', ['general', 'orders', 'cart'])}}" class="btn btn-outline-dark border border-secondary-subtle d-flex align-items-center justify-content-center gap-1 w-100"><i class='bx bx-cart align-middle'></i> Add To Cart</a> --}}
                             </div>
                         </div>
                     </div>
@@ -734,7 +734,7 @@
                 <div class="card">
                     <img src="/images/product/p-11.png" alt="" class="img-fluid ">
                     <div class="card-body bg-light-subtle rounded-bottom">
-                        <a href="{{ route('third', ['general', 'products', 'detail'])}}" class="text-dark fw-medium fs-16">White Rubber Smart Watch</a>
+                        {{-- <a href="{{ route('third', ['general', 'products', 'detail'])}}" class="text-dark fw-medium fs-16">White Rubber Smart Watch</a> --}}
                         <div class="my-1">
                             <div class="d-flex gap-2 align-items-center">
                                 <ul class="d-flex text-warning m-0 fs-18  list-unstyled">
@@ -773,7 +773,7 @@
                                         <a href="#!" class="dropdown-item">Delete</a>
                                     </div>
                                 </div>
-                                <a href="{{ route('third', ['general', 'orders', 'cart'])}}" class="btn btn-outline-dark border border-secondary-subtle d-flex align-items-center justify-content-center gap-1 w-100"><i class='bx bx-cart align-middle'></i> Add To Cart</a>
+                                {{-- <a href="{{ route('third', ['general', 'orders', 'cart'])}}" class="btn btn-outline-dark border border-secondary-subtle d-flex align-items-center justify-content-center gap-1 w-100"><i class='bx bx-cart align-middle'></i> Add To Cart</a> --}}
                             </div>
                         </div>
                     </div>
@@ -786,7 +786,7 @@
                 <div class="card">
                     <img src="/images/product/p-12.png" alt="" class="img-fluid ">
                     <div class="card-body bg-light-subtle rounded-bottom">
-                        <a href="{{ route('third', ['general', 'products', 'detail'])}}" class="text-dark fw-medium fs-16">Men Brown Leather Shoes</a>
+                        {{-- <a href="{{ route('third', ['general', 'products', 'detail'])}}" class="text-dark fw-medium fs-16">Men Brown Leather Shoes</a> --}}
                         <div class="my-1">
                             <div class="d-flex gap-2 align-items-center">
                                 <ul class="d-flex text-warning m-0 fs-18  list-unstyled">
@@ -825,7 +825,7 @@
                                         <a href="#!" class="dropdown-item">Delete</a>
                                     </div>
                                 </div>
-                                <a href="{{ route('third', ['general', 'orders', 'cart'])}}" class="btn btn-outline-dark border border-secondary-subtle d-flex align-items-center justify-content-center gap-1 w-100"><i class='bx bx-cart align-middle'></i> Add To Cart</a>
+                                {{-- <a href="{{ route('third', ['general', 'orders', 'cart'])}}" class="btn btn-outline-dark border border-secondary-subtle d-flex align-items-center justify-content-center gap-1 w-100"><i class='bx bx-cart align-middle'></i> Add To Cart</a> --}}
                             </div>
                         </div>
                     </div>
