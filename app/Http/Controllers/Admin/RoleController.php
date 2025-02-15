@@ -59,9 +59,9 @@ class RoleController extends Controller
 
         $role->syncPermissions($request->permissions);
 
-        // $flasher->addSuccess('Role Created', 'Dash UI');
+        session()->flash('success', 'Data has been saved successfully!');
 
-        return view('users.role.create');
+        return redirect()->route('admin.roles.index');
     }
 
     /**

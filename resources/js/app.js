@@ -706,7 +706,33 @@ class ToastNotification {
     }
 }
 
+class Notification {
+    static notify(type, message) {
+        Toastify({
+            text: message,
+            gravity: 'top',
+            position: 'center',
+            className: type,
+            duration: 3000,
+            close: true,
+        }).showToast();
+    }
+
+    static showFlashMessages() {
+        if (document.querySelector('meta[name="session-success"]')) {
+            const message = document.querySelector('meta[name="session-success"]').content;
+            this.notify('success', message);
+        }
+
+        if (document.querySelector('meta[name="session-error"]')) {
+            const message = document.querySelector('meta[name="session-error"]').content;
+            this.notify('danger', message);
+        }
+    }
+}
+
 document.addEventListener('DOMContentLoaded', function (e) {
+    // Inisialisasi komponen lain
     new Components().init();
     new FormValidation().init();
     new FormAdvanced().init();
@@ -715,5 +741,5 @@ document.addEventListener('DOMContentLoaded', function (e) {
     new Dragula().init();
     new SwiperSlider().init();
     new ToastNotification().init();
+    Notification.showFlashMessages();
 });
-
