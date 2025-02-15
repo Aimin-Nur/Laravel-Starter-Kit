@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-<div class="container">
+<div class="container bg-white">
     <div class="row">
         <div class="py-3">
             <div id="table-role"></div>

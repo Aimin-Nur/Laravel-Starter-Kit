@@ -238,9 +238,9 @@
                             <li class="sub-nav-item">
                                 <a class="sub-nav-link" href="{{ route('admin.roles.index')  }}">List</a>
                             </li>
-                            <li class="sub-nav-item">
-                                <a class="sub-nav-link" href="{{ route('admin.roles.edit', ['id' => 1])}}">Edit</a>
-                            </li>
+                            {{-- <li class="sub-nav-item">
+                                <a class="sub-nav-link" href="{{ route('admin.roles.show', ['roles' => 111 ])}}">Edit</a>
+                            </li> --}}
                             <li class="sub-nav-item">
                                 <a class="sub-nav-link" href="{{ route('admin.roles.create')}}">Create</a>
                             </li>

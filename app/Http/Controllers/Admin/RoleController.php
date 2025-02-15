@@ -25,18 +25,13 @@ class RoleController extends Controller
      */
     public function index()
     {
-        $roles = Role::get();
-        $permissions = Permission::all();
-        return view('users.role.list', [
-            'roles' => $roles,
-            'permissions' => $permissions,
-        ]);
+        return view('users.role.list');
 
     }
 
     public function getRolesData()
     {
-        $roles = Role::select('name')->get();
+        $roles = Role::get();
         return response()->json($roles);
     }
 
@@ -77,7 +72,9 @@ class RoleController extends Controller
      */
     public function show($id)
     {
-        return redirect(route('admin.roles.index'));
+        $role = Role::findOrFail($id);
+        $permissions = Permission::all();
+        return view('users.role.edit', compact('role', 'permissions'));
     }
 
     /**
@@ -86,18 +83,18 @@ class RoleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
-    {
-        $role = Role::findOrFail($id);
-        $permissions = Permission::all();
-        if (Auth()->user()->hasRole($role->name) != $role->name & $role->name != 'SuperAdmin') {
-            return view('admin.roles.edit', compact('role', 'permissions'));
-        } else {
-            // $flasher->addError('Not Allowed', 'Dash UI');
-            return redirect(route('admin.roles.index'));
-        }
+    // public function edit($id)
+    // {
+    //     $role = Role::findOrFail($id);
+    //     $permissions = Permission::all();
+    //     if (Auth()->user()->hasRole($role->name) != $role->name & $role->name != 'SuperAdmin') {
+    //         return view('users.role.edit', compact('role', 'permissions'));
+    //     } else {
+    //         // $flasher->addError('Not Allowed', 'Dash UI');
+    //         return redirect(route('admin.roles.index'));
+    //     }
 
-    }
+    // }
 
     /**
      * Update the specified resource in storage.

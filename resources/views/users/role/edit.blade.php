@@ -18,7 +18,7 @@
                         <form>
                             <div class="mb-3">
                                 <label for="roles-name" class="form-label">Roles Name</label>
-                                <input type="text" id="roles-name" class="form-control" placeholder="Role name" value="Workspace Manager">
+                                <input type="text" id="roles-name" class="form-control" value="{{$role->name}}">
                             </div>
                         </form>
                     </div>

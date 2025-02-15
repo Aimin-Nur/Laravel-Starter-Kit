@@ -121,8 +121,7 @@ Route::group([
     Route::patch('admin/profile/{user}/othersUpdate', [ProfileController::class, 'othersUpdate'])->name('profile.othersUpdate');
 
     Route::resource('roles', RoleController::class);
-    Route::get('admin/roles/data', [RoleController::class, 'getRolesData'])->name('roles.data');
-    Route::get('admin/roles/index', [RoleController::class, 'index'])->name('roles.index');
+    Route::get('data', [RoleController::class, 'getRolesData'])->name('roles.data');
 
     Route::post('admin/roles/edit/{id}', [RoleController::class, 'edit'])->name('roles.edit');
     Route::resource('permissions', PermissionController::class);
