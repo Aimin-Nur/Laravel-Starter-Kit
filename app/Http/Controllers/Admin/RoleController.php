@@ -29,10 +29,9 @@ class RoleController extends Controller
 
     }
 
-    public function getRolesData()
+    public function getRolesData(RoleList $roleList)
     {
-        $roles = Role::get();
-        return response()->json($roles);
+        return $roleList->getRolesData();
     }
 
     /**

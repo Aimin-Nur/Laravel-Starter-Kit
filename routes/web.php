@@ -38,6 +38,7 @@ use Illuminate\Container\Attributes\Auth;
 */
 
 require __DIR__ . '/auth.php';
+Route::get('/', [RoutingController::class, 'index'])->name('root');
 
 Route::group(['middleware' => 'auth'], function () {
     // Route::get('/', [RoutingController::class, 'index'])->name('root');
@@ -124,6 +125,8 @@ Route::group([
     Route::get('data', [RoleController::class, 'getRolesData'])->name('roles.data');
 
     Route::post('admin/roles/edit/{id}', [RoleController::class, 'edit'])->name('roles.edit');
+
     Route::resource('permissions', PermissionController::class);
+    Route::get('data/permissions', [PermissionController::class, 'getPermissionsData'])->name('permissions.data');
 });
 

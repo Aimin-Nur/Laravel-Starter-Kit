@@ -1,5 +1,9 @@
 @extends('layouts.vertical', ['title' => 'Permissions'])
 
+@section('css')
+@vite(['node_modules/gridjs/dist/theme/mermaid.min.css'])
+@endsection
+
 @section('content')
 
 <div class="row">
@@ -81,17 +85,12 @@
                 <div>
                     <h4 class="card-title">All Permissions List</h4>
                 </div>
-                <div class="dropdown">
-                    <a href="#" class="dropdown-toggle btn btn-sm btn-outline-light rounded" data-bs-toggle="dropdown" aria-expanded="false">
-                        This Month
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-end">
-                        <!-- item-->
-                        <a href="#!" class="dropdown-item">Download</a>
-                        <!-- item-->
-                        <a href="#!" class="dropdown-item">Export</a>
-                        <!-- item-->
-                        <a href="#!" class="dropdown-item">Import</a>
+               <a class="btn btn-primary text-white" href="{{ route('admin.permissions.create') }}">Create New Permission</a>
+            </div>
+            <div class="container bg-white">
+                <div class="row">
+                    <div class="py-3">
+                        <div id="table-permission"></div>
                     </div>
                 </div>
             </div>
@@ -189,7 +188,7 @@
                                 <td>
                                     <p class="fs-15 mb-0">Payroll</p>
                                 </td>
-                                <td><span class="badge bg-primary-subtle text-primary py-1 px-2 fs-11">Manager</span> <span class="badge bg-info-subtle text-info py-1 px-2 fs-11">Administrator</span> <span class="badge bg-success-subtle text-success py-1 px-2 fs-11">Analyst</span> <span class="badge bg-warning-subtle text-warning py-1 px-2 fs-11">Trial</span></td>
+                                <td></td>
                                 <td>27 Jun 2024, 12:00 am</td>
                                 <td>14 May 2024</td>
                                 <td>
@@ -335,4 +334,8 @@
 
 </div>
 
+@endsection
+
+@section('script-bottom')
+@vite(['resources/js/components/table-gridjs.js'])
 @endsection

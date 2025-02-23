@@ -3,10 +3,12 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Services\Admin\Datatables\PermissionList;
 use Flasher\Prime\FlasherInterface;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Spatie\Permission\Models\Permission;
+use Spatie\Permission\Models\Role;
 
 class PermissionController extends Controller
 {
@@ -18,8 +20,14 @@ class PermissionController extends Controller
      */
     public function index()
     {
-        $permissions = Permission::whereNotIn('name', ['AdminPanel access'])->get();
-        return view('users.pages-permission', compact('permissions'));
+        $roles = Role::whereNotIn('name', ['SuperAdmin'])->get();
+        $permissions = Permission::all();
+        return view('users.pages-permission', compact('permissions', 'roles'));
+    }
+
+    public function getPermissionsData(PermissionList $permissionList)
+    {
+        return $permissionList->getPermissionsData();
     }
 
     /**
@@ -29,7 +37,8 @@ class PermissionController extends Controller
      */
     public function create()
     {
-        //
+        $getRoles = Role::get();
+        return view('users.create-permission', compact('getRoles'));
     }
 
     /**
@@ -38,7 +47,8 @@ class PermissionController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, FlasherInterface $flasher)
+
+    public function store(Request $request)
     {
         $request->validate([
             'name' => 'required',
@@ -46,9 +56,15 @@ class PermissionController extends Controller
         $input['name'] = Str::ucfirst($request->name);
 
         Permission::create($input);
-        $flasher->addSuccess('Permission "'.$request->name. '" Added', 'Dash UI');
+
+        // // Log Create Permission
+        // LogServices::logServices('create permission', 'Create New Permission', $input);
+
+        session()->flash('success', 'Permission has been saved successfully!');
+
         return redirect(route('admin.permissions.index'));
     }
+
 
     /**
      * Display the specified resource.
